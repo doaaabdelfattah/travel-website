@@ -2,10 +2,28 @@ import { NavLink } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    setIsScrolled(scrollTop > 50);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed h-[150px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[50px] z-50 ">
+    <div
+      className={`fixed h-[150px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[50px] z-50
+    ${isScrolled ? "bg-gray-200/50 shadow-md" : "bg-transparent"}
+    `}
+    >
       {/* Logo */}
       <div className="ml-10 my-10 text-white">
         <h1 className="uppercase text-center font-bold text-6xl">Travel</h1>
@@ -18,7 +36,9 @@ const NavBar = () => {
             <NavLink
               to={"/"}
               className={({ isActive }) =>
-                isActive ? "active-menu" : "cursor-pointer"
+                `${isScrolled ? "text-black" : "text-white"} ${
+                  isActive ? "active-menu" : "cursor-pointer"
+                }`
               }
             >
               Home
@@ -28,7 +48,9 @@ const NavBar = () => {
             <NavLink
               to={"/aboutus"}
               className={({ isActive }) =>
-                isActive ? "active-menu" : "cursor-pointer"
+                `${isScrolled ? "text-black" : "text-white"} ${
+                  isActive ? "active-menu" : "cursor-pointer"
+                }`
               }
             >
               About Us
@@ -38,7 +60,9 @@ const NavBar = () => {
             <NavLink
               to={"/tours"}
               className={({ isActive }) =>
-                isActive ? "active-menu" : "cursor-pointer"
+                `${isScrolled ? "text-black" : "text-white"} ${
+                  isActive ? "active-menu" : "cursor-pointer"
+                }`
               }
             >
               Tours
@@ -48,7 +72,9 @@ const NavBar = () => {
             <NavLink
               to={"/booking"}
               className={({ isActive }) =>
-                isActive ? "active-menu" : "cursor-pointer"
+                `${isScrolled ? "text-black" : "text-white"} ${
+                  isActive ? "active-menu" : "cursor-pointer"
+                }`
               }
             >
               Booking
@@ -58,7 +84,9 @@ const NavBar = () => {
             <NavLink
               to={"/contact"}
               className={({ isActive }) =>
-                isActive ? "active-menu" : "cursor-pointer"
+                `${isScrolled ? "text-black" : "text-white"} ${
+                  isActive ? "active-menu" : "cursor-pointer"
+                }`
               }
             >
               Contact us
