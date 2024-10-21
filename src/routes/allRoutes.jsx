@@ -1,5 +1,6 @@
 import Booking from "../pages/Booking";
 import Home from "../pages/Home";
+import BookingForm from "../components/BookingForm";
 
 export const allRoutes = [
   {
@@ -9,5 +10,9 @@ export const allRoutes = [
   {
     path: "/booking",
     element: <Booking />,
+  },
+  {
+    path: "bookingForm",
+    element: <BookingForm />,
   },
 ];
