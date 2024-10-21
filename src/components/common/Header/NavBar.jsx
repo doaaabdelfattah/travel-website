@@ -5,7 +5,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const NavBar = () => {
   return (
-    <div className="sticky h-[150px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[50px] z-20 ">
+    <div className="fixed h-[150px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[50px] z-50 ">
       {/* Logo */}
       <div className="ml-10 my-10 text-white">
         <h1 className="uppercase text-center font-bold text-6xl">Travel</h1>

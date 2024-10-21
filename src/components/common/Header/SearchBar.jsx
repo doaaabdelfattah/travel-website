@@ -2,7 +2,7 @@ const SearchBar = () => {
   return (
     <div className="p-[50px] flex flex-wrap gap-8 justify-center lg:justify-between items-center relative z-30">
       <div className="flex relative">
-        <select className="py-6 lg:px-48 px-36  appearance-none rounded-full bg-slate-100/60">
+        <select className="py-6 lg:px-48 px-36  appearance-none rounded-full bg-slate-100/60 outline-none">
           <option>All Services</option>
           <option>Air Balloons</option>
           <option>Tour</option>
@@ -26,7 +26,7 @@ const SearchBar = () => {
         </div>
       </div>
       <div className="flex relative">
-        <select className="py-6 relative lg:px-48 px-36 appearance-none rounded-full bg-slate-100/60">
+        <select className="py-6 relative lg:px-48 px-36 appearance-none rounded-full bg-slate-100/60 outline-none">
           <option>All Services</option>
           <option>Air Balloons</option>
           <option>Tour</option>

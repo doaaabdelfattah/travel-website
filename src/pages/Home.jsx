@@ -1,5 +1,5 @@
-import GeneralInfo from "../components/HomeComponants/GeneralInfo";
-import Hero from "../components/HomeComponants/Hero";
+import GeneralInfo from "../components/HomeComponents/GeneralInfo";
+import Hero from "../components/common/Header/Hero";
 
 const Home = () => {
   return (

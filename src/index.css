@@ -5,7 +5,7 @@
 /* ==================== Global Rules ==================== */
 
 :root {
-  --hover-color: #c9785a;
+  --hover-color: #c6783e;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -47,7 +47,7 @@ h1 {
   content: "";
   height: 5%;
   width: 100%;
-  background-color: #c9785a;
+  background-color: #c6783e;
   position: absolute;
   top: 600px;
   left: 20px;
@@ -57,7 +57,7 @@ h1 {
   content: "";
   height: 100%;
   width: 5%;
-  background-color: #c9785a;
+  background-color: #c6783e;
   position: absolute;
   top: 30px;
   right: -30px;
