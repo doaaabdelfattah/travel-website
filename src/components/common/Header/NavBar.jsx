@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed h-[150px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[50px] z-50
+      className={`fixed h-[150px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[50px] z-[99]
     ${
       isScrolled
         ? "bg-gray-200/50 backdrop-blur-md shadow-md"
