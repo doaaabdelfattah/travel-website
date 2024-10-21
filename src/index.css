@@ -20,6 +20,7 @@ html, body {
 }
 :root {
   --hover-color: #c6783e;
+  --text-color: #1f2937;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -30,6 +31,7 @@ html, body {
 
 html {
   scroll-behavior: smooth;
+  color: #1f2937;
 }
 
 * {
@@ -40,6 +42,7 @@ html {
 
 h1 {
   font-family: "Marcellus", serif;
+  color: #1f2937;
 }
 
 .active-menu {
@@ -76,4 +79,9 @@ h1 {
   top: 30px;
   right: -30px;
   z-index: 20;
+}
+
+.gradient {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
