@@ -20,7 +20,7 @@ html, body {
 }
 :root {
   --hover-color: #c6783e;
-  --text-color: #1f2937;
+  --text-color: white;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -42,7 +42,7 @@ html {
 
 h1 {
   font-family: "Marcellus", serif;
-  color: #1f2937;
+  /* color: white; */
 }
 
 .active-menu {
@@ -82,6 +82,42 @@ h1 {
 }
 
 .gradient {
-  background-color: #ffdee9;
+  background-color: #c6783e;
   background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+.hover-line {
+  transition: width 0.3s ease;
+}
+
+.card1:hover .hover-line,
+.card2:hover .hover-line,
+.card4:hover .hover-line,
+.card5:hover .hover-line {
+  width: 100%;
+  background-color: var(--hover-color);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card1:hover .overlay,
+.card2:hover .overlay,
+.card4:hover .overlay,
+.card5:hover .overlay {
+  opacity: 1;
+}
+.card .review-section {
+ display: none;
+}
+
+.card:hover .review-section {
+display: flex;
+font-size: large;
 }

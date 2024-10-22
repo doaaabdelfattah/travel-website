@@ -1,6 +1,6 @@
 const GeneralInfo = () => {
   return (
-    <div className="flex justify-center flex-wrap lg:flex-nowrap items-center gap-8 lg:w-[80%] mx-auto bg-[#ffff] my-[100px]">
+    <div className="flex justify-center flex-wrap lg:flex-nowrap items-center gap-8 lg:w-[80%] mx-auto bg-[#ffff] my-[100px] text-[#1f2937]" id="aboutus">
       <div className="flex-col w-6/12 justify-start">
         <span className="uppercase tracking-widest text-hover-color">
           The Best Travel Experience

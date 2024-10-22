@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="bg-hover-color px-10 py-[40px] flex border-t-[1.5px] border-white/[0.2] flex-wrap lg:flex-nowrap gap-10 justify-between items-center ">
+    <div className="bg-hover-color px-10 py-[40px] flex border-t-[1.5px] border-white/[0.2] flex-wrap lg:flex-nowrap gap-10 justify-between items-center " id="contactus">
       {/* ==== Left Section ======== */}
       <div className="flex justify-start items-center  w-full md:w-4/12">
         <div className="ml-10 my-10 text-white flex justify-center flex-col ">

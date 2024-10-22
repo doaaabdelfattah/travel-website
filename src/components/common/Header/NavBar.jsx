@@ -3,6 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { useEffect, useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,7 +15,7 @@ const NavBar = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -49,52 +50,44 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <NavLink
-              to={"/aboutus"}
-              className={({ isActive }) =>
-                `${isScrolled ? "text-black" : "text-white"} ${
-                  isActive ? "active-menu" : "cursor-pointer"
-                }`
-              }
+          <ScrollLink
+              to="aboutus"
+              smooth={true}
+              duration={500}
+              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               About Us
-            </NavLink>
+            </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <NavLink
-              to={"/tours"}
-              className={({ isActive }) =>
-                `${isScrolled ? "text-black" : "text-white"} ${
-                  isActive ? "active-menu" : "cursor-pointer"
-                }`
-              }
+          <ScrollLink
+              to="cards"
+              smooth={true}
+              duration={500}
+              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
-              Tours
-            </NavLink>
+             Trips
+            </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <NavLink
-              to={"/booking"}
-              className={({ isActive }) =>
-                `${isScrolled ? "text-black" : "text-white"} ${
-                  isActive ? "active-menu" : "cursor-pointer"
-                }`
-              }
+            <ScrollLink
+              to="booking"
+              smooth={true}
+              duration={500}
+              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               Booking
-            </NavLink>
+            </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <NavLink
-              to={"/contact"}
-              className={({ isActive }) =>
-                `${isScrolled ? "text-black" : "text-white"} ${
-                  isActive ? "active-menu" : "cursor-pointer"
-                }`
-              }
+            <ScrollLink
+              to="contactus"
+              smooth={true}
+              duration={500}
+              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               Contact us
-            </NavLink>
+            </ScrollLink>
           </li>
         </ul>
       </div>

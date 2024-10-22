@@ -19,7 +19,7 @@ function Reviews() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 5000,
     arrows: false, // Disable arrows
   };
 
@@ -46,7 +46,7 @@ function Reviews() {
           </div>
         </div>
 
-        <div className="right-sec absolute top-[230px] right-[60px] flex flex-col h-[70%] pb-5 text-black w-[30%] pt-5 bg-white shadow-lg">
+        <div className="right-sec absolute top-[230px] right-[60px] flex flex-col h-[430px] pb-5 text-black w-[30%] pt-5 bg-white shadow-lg">
           <div className="w-full flex flex-col justify-start items-start mt-8 ml-5">
             <p className="text-sm text-gray-500 tracking-wide">Testimonials</p>
             <h2 className="text-3xl font-bold text-[#C6783E] tracking-wider">
