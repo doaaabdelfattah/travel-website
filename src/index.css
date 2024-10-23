@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 /* ==================== Global Rules ==================== */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -40,7 +41,8 @@ html {
   /* font-family: "Playfair Display", serif; */
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Marcellus", serif;
   /* color: white; */
 }
@@ -114,10 +116,10 @@ h1 {
   opacity: 1;
 }
 .card .review-section {
- display: none;
+  display: none;
 }
 
 .card:hover .review-section {
-display: flex;
-font-size: large;
+  display: flex;
+  font-size: large;
 }

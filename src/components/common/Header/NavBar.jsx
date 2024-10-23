@@ -50,41 +50,49 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-          <ScrollLink
+            <ScrollLink
               to="aboutus"
               smooth={true}
               duration={500}
-              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } cursor-pointer`}
             >
               About Us
             </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-          <ScrollLink
+            <ScrollLink
               to="cards"
               smooth={true}
               duration={500}
-              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } cursor-pointer`}
             >
-             Trips
+              Trips
             </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <ScrollLink
-              to="booking"
+            <a
+              href="#booking-home"
               smooth={true}
-              duration={500}
-              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
+              duration={400}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } cursor-pointer`}
             >
               Booking
-            </ScrollLink>
+            </a>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
             <ScrollLink
               to="contactus"
               smooth={true}
               duration={500}
-              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } cursor-pointer`}
             >
               Contact us
             </ScrollLink>

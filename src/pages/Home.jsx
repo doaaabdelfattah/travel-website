@@ -5,17 +5,16 @@ import BookingForm from "../components/BookingForm";
 import Reviews from "../components/Reviews";
 import Cards from "../components/Cards";
 
-
 const Home = () => {
   return (
     <>
       <Hero />
       <GeneralInfo />
-   
-<Cards />
-<BookingForm />
-<Reviews />
 
+      <Cards />
+      <div id="booking-home" className="h-[100px]"></div>
+      <BookingForm />
+      <Reviews />
     </>
   );
 };
