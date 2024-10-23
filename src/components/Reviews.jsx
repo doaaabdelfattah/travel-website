@@ -25,7 +25,7 @@ function Reviews() {
 
   return (
     <>
-      <div className="Reviews-container relative w-full h-screen flex flex-col justify-around">
+      <div className="Reviews-container relative w-full h-[70vh] flex flex-col justify-around">
         <div
           className="relative w-full h-full bg-cover bg-center parallax"
           style={{ backgroundImage: `url(${airbalonImage})` }}
