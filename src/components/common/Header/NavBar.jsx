@@ -50,7 +50,17 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <ScrollLink
+          <a
+              href="#general-home"
+              smooth={true}
+              duration={500}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } cursor-pointer`}
+            >
+              About Us
+            </a>
+            {/* <ScrollLink
               to="aboutus"
               smooth={true}
               duration={500}
@@ -59,10 +69,21 @@ const NavBar = () => {
               } cursor-pointer`}
             >
               About Us
-            </ScrollLink>
+            </ScrollLink> */}
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <ScrollLink
+
+          <a
+              href="#cards-home"
+              smooth={true}
+              duration={400}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } cursor-pointer`}
+            >
+              Trips
+            </a>
+            {/* <ScrollLink
               to="cards"
               smooth={true}
               duration={500}
@@ -71,7 +92,7 @@ const NavBar = () => {
               } cursor-pointer`}
             >
               Trips
-            </ScrollLink>
+            </ScrollLink> */}
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
             <a
