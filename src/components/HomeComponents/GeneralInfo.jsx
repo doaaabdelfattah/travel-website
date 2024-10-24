@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import imgballon from "../../assets/images/AirBalloon-4.jpg"
 
 const GeneralInfo = () => {
   const ref = useRef(null);
@@ -21,7 +22,7 @@ const GeneralInfo = () => {
         <div className="h-[400px] lg:h-[600px] w-full lg:w-[500px] relative mx-auto">
           <div className="hidden lg:block back-rectangle"></div>
           <img
-            src="http://localhost:5173/src/assets/images/AirBalloon-4.jpg"
+            src={imgballon}
             className="h-full w-full object-cover z-30 hover:scale-[.9] duration-300 transition-all"
           />
         </div>
