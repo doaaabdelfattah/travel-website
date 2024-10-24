@@ -23,7 +23,7 @@ function Cards() {
         </div>
         <div className="topCards grid grid-cols-1 md:grid-cols-3 gap-4 h-[400px] pb-2">
           <div
-            className="card card1 bg-cover relative bg-center shadow-lg  overflow-hidden w-full md:col-span-2"
+            className="card card1 bg-cover relative bg-center shadow-lg overflow-hidden w-full md:col-span-2"
             style={{ backgroundImage: `url(${trip4})`, objectFit: "cover" }}
           >
             <div className="overlay"></div>
@@ -32,7 +32,7 @@ function Cards() {
                 250$
               </button>
               <div className="absolute py-3 bottom-10 text-white">
-                <div className=" flex items-center">
+                <div className="flex items-center">
                   <IoStarSharp className="text-yellow-400" />
                   <IoStarSharp className="text-yellow-400" />
                   <IoStarSharp className="text-yellow-400" />
@@ -89,7 +89,7 @@ function Cards() {
             </div>
           </div>
         </div>
-        <div className="bottomCards grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-[220px]">
+        <div className="bottomCards grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-[400px] ">
           <div
             className="card card1 overflow-hidden bg-cover bg-center shadow-lg relative"
             style={{ backgroundImage: `url(${trip3})`, objectFit: "cover" }}
@@ -100,7 +100,7 @@ function Cards() {
                 250$
               </button>
               <div className="absolute px-4 py-1 bottom-10 text-white">
-                <div className=" flex items-center">
+                <div className="flex items-center">
                   <IoStarSharp className="text-yellow-400" />
                   <IoStarSharp className="text-yellow-400" />
                   <IoStarSharp className="text-yellow-400" />
@@ -124,7 +124,7 @@ function Cards() {
             </div>
           </div>
           <div
-            className="card card4 bg-cover bg-center shadow-lg  overflow-hidden relative"
+            className="card card4 bg-cover bg-center shadow-lg overflow-hidden relative"
             style={{ backgroundImage: `url(${trip2})`, objectFit: "cover" }}
           >
             <div className="overlay"></div>
@@ -157,7 +157,7 @@ function Cards() {
             </div>
           </div>
           <div
-            className="card card5 bg-cover bg-center shadow-lg  overflow-hidden relative"
+            className="card card5 bg-cover bg-center shadow-lg overflow-hidden relative"
             style={{ backgroundImage: `url(${trip5})`, objectFit: "cover" }}
           >
             <div className="overlay"></div>
@@ -167,7 +167,7 @@ function Cards() {
               </button>
             </div>
             <div className="absolute px-4 py-1 bottom-10 text-white">
-              <div className=" flex flex-row">
+              <div className="flex flex-row">
                 <IoStarSharp className="text-yellow-400" />
                 <IoStarSharp className="text-yellow-400" />
                 <IoStarSharp className="text-yellow-400" />
@@ -178,7 +178,7 @@ function Cards() {
               <h2 className="text-xl font-semibold tracking-widest">
                 Luxor Tour
               </h2>
-              <div className="flex flex-row review-section  justify-start items-center mb-1 text-white text-md">
+              <div className="flex flex-row review-section justify-start items-center mb-1 text-white text-md">
                 <IoMdTime />
                 <h2 className="pl-1 pr-2">10Days</h2>
                 <FaRegUser className="" />

@@ -8,10 +8,10 @@ import { FaUserFriends } from "react-icons/fa";
 
 import { FaChildren } from "react-icons/fa6";
 
-import { FiUsers } from "react-icons/fi";
-import { MdOutlineAddAPhoto, MdModeOfTravel } from "react-icons/md";
-import { CiMusicNote1 } from "react-icons/ci";
-import { TbPlayVolleyball } from "react-icons/tb";
+// import { FiUsers } from "react-icons/fi";
+// import { MdOutlineAddAPhoto, MdModeOfTravel } from "react-icons/md";
+// import { CiMusicNote1 } from "react-icons/ci";
+// import { TbPlayVolleyball } from "react-icons/tb";
 import { useState } from "react";
 function BookingForm() {
   const [selectedDate, setSelectedDate] = useState(null);
