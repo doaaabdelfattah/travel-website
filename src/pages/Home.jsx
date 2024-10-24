@@ -9,8 +9,9 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <div id="general-home" className="h-[100px]"></div>
       <GeneralInfo />
-
+      <div id="cards-home" className="h-[170px]"></div>
       <Cards />
       <div id="booking-home" className="h-[100px]"></div>
       <BookingForm />
