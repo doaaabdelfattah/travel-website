@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className="w-full mx-auto relative">
         {/* Hero background image */}
-        <div className="min-h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${imageBallon})  objectFit: "cover"  `}}>
+        <div className="min-h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${imageBallon}) `, objectFit: "cover"  }}>
           {/* Black overlay */}
           <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
           {/* Main header */}
