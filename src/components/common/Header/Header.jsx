@@ -31,7 +31,7 @@ const Header = () => {
       variants={containerVariants}
     >
       <motion.h1
-        className="text-[4rem]"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
         variants={textVariants}
         transition={{ type: "tween", duration: 0.6 }}
       >
@@ -39,7 +39,7 @@ const Header = () => {
       </motion.h1>
 
       <motion.h1
-        className="text-[4rem]"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3"
         variants={textVariants}
         transition={{ type: "tween", duration: 0.6 }}
       >
@@ -47,7 +47,7 @@ const Header = () => {
       </motion.h1>
 
       <motion.p
-        className="text-xl font-medium mt-5"
+        className="text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-5"
         variants={textVariants}
         transition={{ type: "tween", duration: 0.6 }}
       >

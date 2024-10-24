@@ -19,6 +19,10 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -34,76 +38,77 @@ const NavBar = () => {
     >
       {/* Logo */}
       <div className="text-white">
-        <h1 className="uppercase text-center font-bold text-4xl">Travel</h1>
-        <h1 className="uppercase text-center text-2xl">tours</h1>
+        <h1 className={`${isScrolled ? "text-black" : "text-white"} uppercase text-center font-bold text-4xl`}>Travel</h1>
+        
+        <h1 className={`${isScrolled ? "text-black" : "text-white"} uppercase text-center text-2xl`}>tours</h1>
+        
       </div>
 
       {/* Menu */}
       <div className="mr-[90px] hidden md:flex">
         <ul className="flex gap-8 items-center text-white justify-center text-lg font-semibold uppercase tracking-wide">
           <li className="cursor-pointer relative p-2">
-            <NavLink
-              to={"/"}
-              className={({ isActive }) =>
-                `${isScrolled ? "text-black" : "text-white"} ${
-                  isActive && !isMenuOpen ? "active-menu" : "cursor-pointer"
-                }`
-              }
-            >
-              Home
-            </NavLink>
+          <ScrollLink
+            to="Hero" // This should match the ID of the section you're scrolling to
+            smooth={true}
+            duration={500}
+            offset={-90} // Adjust for navbar height if needed
+            className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
+          >
+            Home
+          </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-          <a
-              href="#general-home"
-              smooth={true}
-              duration={500}
-              className={`${
-                isScrolled ? "text-black" : "text-white"
-              } cursor-pointer`}
-            >
-              About Us
-            </a>
-            {/* <ScrollLink
+          
+            <ScrollLink 
               to="aboutus"
               smooth={true}
               duration={500}
+              offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               About Us
-            </ScrollLink> */}
+            </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
 
-          <a
-              href="#cards-home"
-              smooth={true}
-              duration={400}
-              className={`${
-                isScrolled ? "text-black" : "text-white"
-              } cursor-pointer`}
-            >
-              Trips
-            </a>
-            {/* <ScrollLink
+          
+            <ScrollLink
               to="cards"
               smooth={true}
               duration={500}
+              offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               Trips
-            </ScrollLink> */}
+            </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <a
-              href="#booking-home"
+            
+            <ScrollLink
+              to="booking"
+              smooth={true}
+              duration={500}
+              offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               Booking
-            </a>
+            </ScrollLink>
           </li>
           <li className="cursor-pointer hover:text-hover-color p-2 relative">
-            <ScrollLink
+          <ScrollLink
+              to="Reviews"
+              smooth={true}
+              duration={500}
+              offset={-90}
+              className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
+            >
+              Reviews
+            </ScrollLink>
+            
+          </li>
+          <li className="cursor-pointer hover:text-hover-color p-2 relative">
+          <ScrollLink
               to="contactus"
               smooth={true}
               duration={500}
@@ -116,7 +121,8 @@ const NavBar = () => {
       </div>
 
       {/* Icons */}
-      <div className="justify-end items-center gap-5 mr-5 text-white hidden sm:flex">
+      
+      <div className={`${isScrolled ? "text-black" : "text-white"} justify-end items-center gap-5 mr-5 hidden sm:flex`}>
         <span className="hover:text-hover-color cursor-pointer">
           <FaMagnifyingGlass size="25px" />
         </span>
@@ -130,7 +136,9 @@ const NavBar = () => {
 
       {/* Mobile Menu Toggle */}
       <div className="md:hidden w-full h-full font-bold relative">
-        <button className="text-white text-4xl absolute right-0" onClick={toggleMenu}><CiMenuBurger /></button>
+        <button className={`${isScrolled ? "text-black" : "text-white"} text-4xl absolute right-0`}
+        onClick={toggleMenu}><CiMenuBurger /></button>
+      
       </div>
 
       {/* Mobile Menu */}
@@ -139,55 +147,78 @@ const NavBar = () => {
           {/* <button className="bg-white rounded-full justify-center items-center h-10 w-10 absolute right-0 mr-2" onClick={toggleMenu}>X</button> */}
           <ul className="flex flex-col gap-4 items-start text-lg font-semibold uppercase tracking-wide">
             <li className="cursor-pointer p-2">
-              <NavLink
-                to={"/"}
-                className={({ isActive }) =>
-                  `${isScrolled ? "text-black" : "text-white"} ${
-                    isActive && !isMenuOpen ? "active-menu" : "cursor-pointer"
-                  }`
-                }
-              >
-                Home
-              </NavLink>
+             
+          <ScrollLink
+            to="Hero" // This should match the ID of the section you're scrolling to
+            smooth={true}
+            duration={500}
+            offset={-90} // Adjust for navbar height if needed
+            className="text-white cursor-pointer"
+            onClick={closeMenu}
+          >
+            Home
+          </ScrollLink>
             </li>
             <li className="cursor-pointer hover:text-hover-color p-2">
-              <ScrollLink
-                to="aboutus"
-                smooth={true}
-                duration={500}
-                className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
-              >
-                About Us
-              </ScrollLink>
+            <ScrollLink
+              to="aboutus"
+              smooth={true}
+              duration={500}
+              offset={-90}
+              className="text-white cursor-pointer"
+              onClick={closeMenu}
+            >
+              About Us
+            </ScrollLink>
             </li>
             <li className="cursor-pointer hover:text-hover-color p-2">
-              <ScrollLink
-                to="cards"
-                smooth={true}
-                duration={500}
-                className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
-              >
-                Trips
-              </ScrollLink>
+            <ScrollLink
+              to="cards"
+              smooth={true}
+              duration={500}
+              offset={-90}
+              className="text-white cursor-pointer"
+              onClick={closeMenu}
+            >
+              Trips
+            </ScrollLink>
             </li>
             <li className="cursor-pointer hover:text-hover-color p-2">
-              <a
-                href="#booking-home"
-                className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
-              >
-                Booking
-              </a>
+            <ScrollLink
+              to="booking"
+              smooth={true}
+              duration={500}
+              offset={-90}
+              className="text-white cursor-pointer"
+              onClick={closeMenu}
+            >
+              Booking
+            </ScrollLink>
             </li>
             <li className="cursor-pointer hover:text-hover-color p-2">
-              <ScrollLink
-                to="contactus"
-                smooth={true}
-                duration={500}
-                className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
-              >
-                Contact us
-              </ScrollLink>
+            <ScrollLink
+              to="Reviews"
+              smooth={true}
+              duration={500}
+              offset={-90}
+              className="text-white cursor-pointer"
+              onClick={closeMenu}
+            >
+              Reviews
+            </ScrollLink>
+            
             </li>
+            <li className="cursor-pointer hover:text-hover-color p-2 relative">
+            <ScrollLink
+              to="contactus"
+              smooth={true}
+              duration={500}
+              className="text-white cursor-pointer"
+              onClick={closeMenu}
+            >
+              Contact us
+            </ScrollLink>
+          </li>
           </ul>
         </div>
       )}

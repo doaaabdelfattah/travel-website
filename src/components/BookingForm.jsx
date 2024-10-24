@@ -22,10 +22,8 @@ function BookingForm() {
   };
   return (
     <>
-      <div className="w-full h-full text-4xl  mt-[50px]" id="booking">
-        <h1 className="font-bold text-center">Book a tour</h1>
-      </div>
-      <div className="container mx-auto w-[90%] mb-[100px]">
+      
+      <div className="container mx-auto w-[90%] mb-[100px]" id="booking"> 
         <div className="Form-container flex flex-col lg:flex-row justify-between m-5 h-full space-y-5 lg:space-y-0">
           <div className="right-section flex w-full lg:w-[50%] justify-center items-center order-1 lg:order-2">
             <Carousel
@@ -33,15 +31,16 @@ function BookingForm() {
               infiniteLoop={true}
               autoPlay={true}
               interval={6000}
+              className="h-full" 
             >
-              <div>
-                <img className="" src={airbalonImage} alt="Hot Air Balloon" />
+              <div className="image-container">
+                <img className="carousel-image" src={airbalonImage} alt="Hot Air Balloon" />
               </div>
-              <div>
-                <img src={secondImage} alt="Second Image" />
+              <div className="image-container">
+                <img className="carousel-image" src={secondImage} alt="Second Image" />
               </div>
-              <div>
-                <img src={thirdImage} alt="Third Image" />
+              <div className="image-container">
+                <img className="carousel-image" src={thirdImage} alt="Third Image" />
               </div>
             </Carousel>
           </div>
@@ -180,6 +179,19 @@ function BookingForm() {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .image-container {
+          width: 100%;
+          height: 400px; /* Set desired height */
+          overflow: hidden; /* Hide overflow */
+        }
+
+        .carousel-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Cover to maintain aspect ratio */
+        }
+      `}</style>
     </>
   );
 }
