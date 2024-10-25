@@ -25,13 +25,13 @@ const Header = () => {
   return (
     <motion.div
       ref={ref}
-      className="text-white text-center z-[50] flex-col justify-center items-center"
+      className="text-white text-center z-[50] my-10 lg:my-20  flex-col justify-center items-center"
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
+        className="text-4xl lg:text-[5rem]"
         variants={textVariants}
         transition={{ type: "tween", duration: 0.6 }}
       >
@@ -39,7 +39,7 @@ const Header = () => {
       </motion.h1>
 
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3"
+        className=" text-4xl lg:text-[5rem] lg:mt-20"
         variants={textVariants}
         transition={{ type: "tween", duration: 0.6 }}
       >
@@ -47,7 +47,7 @@ const Header = () => {
       </motion.h1>
 
       <motion.p
-        className="text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-5"
+        className="hidden lg:block lg:text-2xl  mt-14"
         variants={textVariants}
         transition={{ type: "tween", duration: 0.6 }}
       >
