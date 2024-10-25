@@ -8,8 +8,8 @@ const Hero = () => {
       <div className="w-full mx-auto relative" id="Hero">
         {/* Hero background image */}
         <div
-          className="min-h-screen object-cover"
-          style={{ backgroundImage: `url(${imageBallon})`, objectFit: "cover" }}
+          className="min-h-screen bg-cover bg-center"
+          style={{ backgroundImage: `url(${imageBallon})` }}
         >
           {/* Black overlay */}
           <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
