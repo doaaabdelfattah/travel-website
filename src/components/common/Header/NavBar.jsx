@@ -51,7 +51,7 @@ const NavBar = () => {
           <ScrollLink
             to="Hero" // This should match the ID of the section you're scrolling to
             smooth={true}
-            duration={500}
+            duration={100}
             offset={-90} // Adjust for navbar height if needed
             className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
           >
@@ -63,7 +63,7 @@ const NavBar = () => {
             <ScrollLink 
               to="aboutus"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
@@ -76,7 +76,7 @@ const NavBar = () => {
             <ScrollLink
               to="cards"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
@@ -88,7 +88,7 @@ const NavBar = () => {
             <ScrollLink
               to="booking"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
@@ -99,7 +99,7 @@ const NavBar = () => {
           <ScrollLink
               to="Reviews"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
@@ -111,7 +111,7 @@ const NavBar = () => {
           <ScrollLink
               to="contactus"
               smooth={true}
-              duration={500}
+              duration={100}
               className={`${isScrolled ? "text-black" : "text-white"} cursor-pointer`}
             >
               Contact us
@@ -151,7 +151,7 @@ const NavBar = () => {
           <ScrollLink
             to="Hero" // This should match the ID of the section you're scrolling to
             smooth={true}
-            duration={500}
+            duration={100}
             offset={-90} // Adjust for navbar height if needed
             className="text-white cursor-pointer"
             onClick={closeMenu}
@@ -163,7 +163,7 @@ const NavBar = () => {
             <ScrollLink
               to="aboutus"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className="text-white cursor-pointer"
               onClick={closeMenu}
@@ -175,7 +175,7 @@ const NavBar = () => {
             <ScrollLink
               to="cards"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className="text-white cursor-pointer"
               onClick={closeMenu}
@@ -187,7 +187,7 @@ const NavBar = () => {
             <ScrollLink
               to="booking"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className="text-white cursor-pointer"
               onClick={closeMenu}
@@ -199,7 +199,7 @@ const NavBar = () => {
             <ScrollLink
               to="Reviews"
               smooth={true}
-              duration={500}
+              duration={100}
               offset={-90}
               className="text-white cursor-pointer"
               onClick={closeMenu}
@@ -212,7 +212,7 @@ const NavBar = () => {
             <ScrollLink
               to="contactus"
               smooth={true}
-              duration={500}
+              duration={100}
               className="text-white cursor-pointer"
               onClick={closeMenu}
             >
