@@ -213,6 +213,7 @@ const NavBar = () => {
               to="contactus"
               smooth={true}
               duration={100}
+              offset={-70}
               className="text-white cursor-pointer"
               onClick={closeMenu}
             >
