@@ -12,7 +12,7 @@ import { SlLocationPin } from "react-icons/sl";
 function Cards() {
   return (
     <>
-      <div className="CardsContainer w-[80%] mx-auto" id="cards">
+      <div className="CardsContainer w-[90%] mx-auto" id="cards">
         <div className="text-center mb-4 flex justify-start items-start flex-col">
           <h2 className="text-md tracking-wider text-[#C6730E]">
             CHOOSE YOUR TRIP
@@ -89,7 +89,7 @@ function Cards() {
             </div>
           </div>
         </div>
-        <div className="bottomCards grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-[400px] ">
+        <div className="bottomCards grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 h-[500px] ">
           <div
             className="card card1 overflow-hidden bg-cover bg-center shadow-lg relative"
             style={{ backgroundImage: `url(${trip3})`, objectFit: "cover" }}
