@@ -27,9 +27,9 @@ function Cards() {
             style={{ backgroundImage: `url(${trip4})`, objectFit: "cover" }}
           >
             <div className="overlay"></div>
-            <div className="p-4 mt-1">
-              <button className="bg-blue-400 text-white py-2 px-4 rotate-90 absolute right-0">
-                250$
+            <div className="p-4 ">
+              <button className="bg-blue-400 text-white py-2 px-4  absolute right-0 top">
+                BOOK NOW !
               </button>
               <div className="absolute py-3 bottom-10 text-white">
                 <div className="flex items-center">
@@ -60,9 +60,9 @@ function Cards() {
             style={{ backgroundImage: `url(${trip1})`, objectFit: "cover" }}
           >
             <div className="overlay"></div>
-            <div className="p-4 mt-1">
-              <button className="bg-blue-400 text-white py-2 px-4 rotate-90 absolute right-0">
-                250$
+            <div className="p-4 ">
+              <button className="bg-blue-400 text-white py-2 px-4 rotate-90 absolute right-[-40px] top-8">
+              BOOK NOW !
               </button>
               <div className="absolute py-3 bottom-10 text-white">
                 <div className="flex items-center">

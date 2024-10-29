@@ -3,6 +3,8 @@ import Home from "../pages/Home";
 import BookingForm from "../components/BookingForm";
 import Reviews from "../components/Reviews";
 import Cards from "../components/Cards";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 export const allRoutes = [
   {
@@ -24,5 +26,13 @@ export const allRoutes = [
   {
   path: "Cards",
   element: <Cards />,
+},
+{
+  path: "login",
+  element: <Login />,
+},
+{
+  path: "register",
+  element: <Register />,
 },
 ];

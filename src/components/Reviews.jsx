@@ -1,12 +1,12 @@
 import React from "react";
-import airbalonImage from "../assets/images/AirBalloon-1.jpg";
-import userImage from "../assets/images/7c453e91f0f26c1d76ccd7c38f8865cf.png";
+import ballonImgae from "../assets/images/AirBalloon-1.jpg";
+import userImage from "../assets/images/2000x2000-0-70-772d64458b4e11e796b58e2d7ed94c59.jpg";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoStarSharp } from "react-icons/io5";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../index.css";
+
 import { MdOutlineAddAPhoto, MdModeOfTravel } from "react-icons/md";
 import { CiMusicNote1 } from "react-icons/ci";
 import { TbPlayVolleyball } from "react-icons/tb";
@@ -28,7 +28,7 @@ function Reviews() {
       <div className="Reviews-container relative w-full h-[100vh] flex flex-col lg:flex-row" id="Reviews">
         <div
           className="relative w-full h-full bg-cover bg-center parallax flex flex-col lg:flex-row justify-around items-center"
-          style={{ backgroundImage: `url(${airbalonImage})` }}
+          style={{ backgroundImage: `url(${ballonImgae})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -46,16 +46,16 @@ function Reviews() {
             </div>
           </div>
 
-          <div className="right-sec relative flex flex-col h-auto lg:h-[430px] pb-[30px] text-black w-[90%] lg:w-[30%] pt-2 bg-white shadow-lg mb-8 lg:mt-0">
+          <div className="right-sec relative flex flex-col h-auto lg:h-[400px] pb-[30px] text-black w-[90%] lg:w-[30%] pt-2 bg-white shadow-lg mb-8 lg:mt-0">
             <div className="w-full flex flex-col justify-start items-start mt-8 ml-5">
               <p className="text-sm text-gray-500 tracking-wide">Testimonials</p>
-              <h2 className="text-2xl lg:text-3xl font-bold text-[#C6783E] tracking-wider">
-                Travelers Reviews
+              <h2 className="text-2xl lg:text-xl font-bold text-[#C6783E] tracking-wider">
+                What Our Clients Say
               </h2>
-              <div className="bg-gray-400 w-[70%] h-[1px] mt-2"></div>
+              <div className="bg-gray-400 w-[85%] h-[1px] mt-2"></div>
             </div>
             <Slider {...settings}>
-              <div className="p-4">
+              <div className="py-8 px-2">
                 <p className="text-gray-500 text-sm lg:text-md">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
                   dolor recusandae natus quas voluptas aperiam alias sunt aut
