@@ -7,7 +7,7 @@ export const register = createAsyncThunk(
   async ({ email, password, name, isAdmin = true }, { rejectWithValue }) => {
     try {
       const response = await api.post('/user/register', { email, password, name, isAdmin });
-      console.log("registration succefully")
+      console.log("Registration successful");
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -15,40 +15,46 @@ export const register = createAsyncThunk(
   }
 );
 
-// Thunk for Login user
+// Thunk for logging in the user
 export const LoginUser = createAsyncThunk(
-  'auth/LoginUser',
+  'auth/loginUser',
   async ({ email, password }, { rejectWithValue }) => {
     try {
       const response = await api.post('/user/login', { email, password });
-      console.log('api response login', response);
-      const token = response.data;
+      console.log('API response login:', response);
+      const { token, user } = response.data;
       localStorage.setItem('token', token);
-      return { token };
+      localStorage.setItem('user', JSON.stringify(user)); // Store user data as a string
+      return { ...user, token }; // Return user data and token
     } catch (error) {
       return rejectWithValue(error.response.data);
     }
   }
 );
 
-// Initial state
-const initialState = {
-  user: null,
-  token: null,
-  loading: false,
-  error: null,
-};
-
 // Auth slice
 const authSlice = createSlice({
   name: 'auth',
-  initialState,
+  initialState: {
+    user: null, // Store user data
+    token: null, // Store token
+    isAuthenticated: false,
+    loading: false,
+    error: null,
+  },
   reducers: {
     logout: (state) => {
-      state.user = null;
-      state.token = null;
-      localStorage.removeItem('token');
+      state.isAuthenticated = false;
+      state.user = null; // Clear user data
+      state.token = null; // Clear token
+      localStorage.removeItem('token'); // Remove token from local storage
+      localStorage.removeItem('user'); // Remove user from local storage
     },
+    // Add setUser to allow setting user state directly
+    setUser: (state, action) => {
+      state.user = action.payload;
+      state.isAuthenticated = true; // Set as authenticated when user data is loaded
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -58,7 +64,9 @@ const authSlice = createSlice({
       })
       .addCase(register.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload;
+        state.isAuthenticated = true;
+        state.user = action.payload; // Save user data
+        localStorage.setItem('user', JSON.stringify(action.payload)); // Save user data to local storage
       })
       .addCase(register.rejected, (state, action) => {
         state.loading = false;
@@ -70,7 +78,9 @@ const authSlice = createSlice({
       })
       .addCase(LoginUser.fulfilled, (state, action) => {
         state.loading = false;
-        state.token = action.payload.token;
+        state.isAuthenticated = true;
+        state.token = action.payload.token; // Store token
+        state.user = action.payload; // Store user data
       })
       .addCase(LoginUser.rejected, (state, action) => {
         state.loading = false;
@@ -80,5 +90,5 @@ const authSlice = createSlice({
 });
 
 // Export actions and reducer
-export const { logout } = authSlice.actions;
+export const { logout, setUser } = authSlice.actions; // Export setUser
 export default authSlice.reducer;
