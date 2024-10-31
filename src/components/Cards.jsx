@@ -12,7 +12,7 @@ import { SlLocationPin } from "react-icons/sl";
 function Cards() {
   return (
     <>
-      <div className="CardsContainer w-[90%] mx-auto" id="cards">
+      <div className="CardsContainer w-[90%] mx-auto my-[100px]" id="cards">
         <div className="text-center mb-4 flex justify-start items-start flex-col">
           <h2 className="text-md tracking-wider text-[#C6730E]">
             CHOOSE YOUR TRIP

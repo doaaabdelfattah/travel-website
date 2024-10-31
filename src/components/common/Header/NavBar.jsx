@@ -51,7 +51,7 @@ const NavBar = () => {
   return (
     <div
       className={`fixed h-[90px] w-full border-b-[1.5px] border-white/[0.2] flex justify-between items-center p-[10px] z-[99]
-    ${isScrolled ? "bg-gray-200/50 shadow-md" : "bg-transparent"}
+    ${isScrolled ? "bg-gray-200/50 shadow-md" : "bg-[#C6783E] shadow-md"}
     `}
     >
       {/* Logo */}

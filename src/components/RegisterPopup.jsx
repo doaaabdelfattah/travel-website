@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 const RegistrationPopup = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
 
-    const handleLoginRedirect = () => {
-        navigate('/Login');
+    const HandleGotohome = () => {
+        navigate('/');
         onClose();
     };
 
@@ -26,14 +26,14 @@ const RegistrationPopup = ({ isOpen, onClose }) => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
             >
-                <div className='absolute top-[50px] text-[#1A76D1] text-[150px] font-bold'>
+                <div className='absolute top-[50px] text-[#C6783E] text-[150px] font-bold'>
                     <IoCheckmarkDoneCircleOutline />
                 </div>
                 <div className='bg-[] h-[200px] w-[390px]'></div>
-                <h2 className='font-bold text-2xl pb-3'>Registration Successful</h2>
-                <p className='mb-5'>Please check your email for further instructions.</p>
-                <button onClick={handleLoginRedirect} className='bg-[#1A76D1] text-white py-2 px-4 rounded-md '>
-                    Go to Login
+                <h2 className='font-bold text-2xl pb-3'>Order Successful!</h2>
+                <p className='mb-5 text-center'>Thank you for your order. Please check your email to confirm your order within 2 days.</p>
+                <button onClick={HandleGotohome} className='bg-[#C6783E] text-white py-2 px-4 rounded-md '>
+                    Go to Home
                 </button>
             </motion.div>
         </Popup>
