@@ -7,7 +7,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { CiMenuBurger } from "react-icons/ci";
 import { useSelector } from "react-redux";
 import {logout} from '../../../redux/reducers/AuthSlice';
-
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 
@@ -19,9 +19,11 @@ const NavBar = () => {
   console.log(user);
   const dispatch = useDispatch();
 
+const navigate = useNavigate();
 
-
-
+const handleToCart = () => {
+  navigate('/cartpage');
+}
 
   const handlelogout = () => {
     dispatch(logout());
@@ -137,7 +139,8 @@ const NavBar = () => {
           <FaMagnifyingGlass size="20px" />
         </span>
         <span className="hover:text-hover-color cursor-pointer">
-          <FaShoppingCart size="20px" />
+          <FaShoppingCart size="20px" 
+          onClick={handleToCart}/>
         </span>
         <span className="hover:text-hover-color cursor-pointer">
           <FaUser size="20px" />
